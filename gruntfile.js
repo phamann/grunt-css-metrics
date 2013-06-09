@@ -7,9 +7,13 @@ module.exports = function(grunt) {
         cssmetrics: {
             dev: {
                 src: [
-                    'test/global.min.css',
-                    'test/head.min.css'
-                ]
+                    'test/*.min.css'
+                ],
+                options: {
+                    quiet: false,
+                    maxRules: 4000,
+                    maxFileSize: 1024000000
+                }
             }
         },
 

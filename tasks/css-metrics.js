@@ -22,6 +22,14 @@ module.exports = function (grunt) {
                     grunt.log.ok(['File size: ' + stats.fileSize]);
                     grunt.log.ok(['GZip size: ' + stats.gzipSize]);
 
+                    if(!options.quiet && options.maxRules && (stats.rules > options.maxRules)) {
+                        grunt.fail.warn(path + ' exceeded maximum rule count');
+                    }
+
+                    if(!options.quiet && options.maxFileSize && (stats.rawFileSize > options.maxFileSize)) {
+                        grunt.fail.warn(path + ' exceeded maximum file size');
+                    }
+
                     next();
 
                 });
