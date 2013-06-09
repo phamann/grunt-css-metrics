@@ -7,10 +7,17 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('cssmetrics', 'Analyse CSS metrics', function () {
 
         var done = this.async(),
-            options = this.options();
+            options = this.options({
+                quiet: false
+            });
 
         function analyseFiles(files) {
             grunt.util.async.forEachSeries(files, function(path, next) {
+
+                if(!grunt.file.exists(path)) {
+                    grunt.log.warn('Source file "' + path + '" not found.');
+                    next();
+                }
 
                 new CSSMetrics(path).stats(function(stats) {
 
