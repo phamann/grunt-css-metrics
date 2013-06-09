@@ -4,6 +4,15 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
+        cssmetrics: {
+            dev: {
+                src: [
+                    'test/global.min.css',
+                    'test/head.min.css'
+                ]
+            }
+        },
+
         jshint: {
             all: [
                 'gruntfile.js',
@@ -20,5 +29,5 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('default', ['jshint', 'cssmetrics:dev']);
 };
