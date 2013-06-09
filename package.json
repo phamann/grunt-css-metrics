@@ -29,8 +29,7 @@
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.4.3",
     "css-parse": "~1.4.0",
-    "filesize": "~1.9.3",
-    "bytesize": "~0.2.0"
+    "humanize": "~0.0.7"
   },
   "keywords": [
     "gruntplugin",
