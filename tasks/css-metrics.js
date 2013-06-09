@@ -1,3 +1,10 @@
+/*
+ * grunt-css-metrics
+ * https://github.com/phamann/grunt-css-metrics
+ *
+ * Copyright (c) 2012 Sindre Sorhus, contributors
+ * Licensed under the MIT license.
+ */
 'use strict';
 var CSSMetrics = require('../lib/cssmetrics'),
     glob = require('glob');
