@@ -2,7 +2,7 @@
  * grunt-css-metrics
  * https://github.com/phamann/grunt-css-metrics
  *
- * Copyright (c) 2012 Sindre Sorhus, contributors
+ * Copyright (c) 2013 Patrick Hamann, contributors
  * Licensed under the MIT license.
  */
 'use strict';
