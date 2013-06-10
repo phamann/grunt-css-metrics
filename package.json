@@ -1,6 +1,6 @@
 {
   "name": "grunt-css-metrics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Grunt task to analyse css files and log simple metrics.",
   "homepage": "https://github.com/phamann/grunt-css-metrics",
   "author": {
@@ -23,13 +23,13 @@
     "test": "grunt"
   },
   "dependencies": {
-    "glob": "3.2.1"
+    "glob": "3.2.1",
+    "css-parse": "~1.4.0",
+    "humanize": "~0.0.7"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.4.3",
-    "css-parse": "~1.4.0",
-    "humanize": "~0.0.7"
+    "grunt-contrib-jshint": "~0.4.3"
   },
   "keywords": [
     "gruntplugin",
