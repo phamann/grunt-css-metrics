@@ -108,6 +108,11 @@ cssmetrics: {
 }
 ```
 
+##Todo
+
+* Pipe output to JSON file
+* Write unit tests
+
 ## Release History
 
 ### 0.1.0 (9th June 2013)
@@ -117,5 +122,5 @@ cssmetrics: {
 ## Credits
 
 * [@visionmedia](https://github.com/visionmedia) for the great [css-parse](https://github.com/visionmedia/css-parse) library.
-* Original work from [@rquinlivan](https://github.com/rquinlivan)'s (css-metrics)[https://github.com/rquinlivan/css-metrics]
+* Original work from [@rquinlivan](https://github.com/rquinlivan)'s [css-metrics](https://github.com/rquinlivan/css-metrics)
 * Inspiration from my collegue [@kaelig](https://github.com/kaelig)
