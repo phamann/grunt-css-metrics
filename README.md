@@ -115,6 +115,10 @@ cssmetrics: {
 
 ## Release History
 
+### 0.1.2 (12th November 2013)
+
+* implement maxSelector checking
+
 ### 0.1.0 (9th June 2013)
 
 * Initial release
