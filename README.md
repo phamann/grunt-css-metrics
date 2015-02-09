@@ -115,6 +115,10 @@ cssmetrics: {
 
 ## Release History
 
+### 0.1.3 (9th February 2015)
+
+* Counting rules and selectors inside @media
+
 ### 0.1.0 (9th June 2013)
 
 * Initial release
