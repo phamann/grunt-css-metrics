@@ -107,12 +107,6 @@ cssmetrics: {
   }
 }
 ```
-
-##Todo
-
-* Pipe output to JSON file
-* Write unit tests
-
 ## Release History
 
 ### 0.1.3 (9th February 2015)
