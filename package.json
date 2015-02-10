@@ -1,15 +1,17 @@
 {
   "name": "grunt-css-count",
-  "version": "0.2.0",
-  "description": "Grunt task to analyse CSS files and log simple metrics. Suitable to watch for 4096 limit in IE9.",
+  "version": "0.2.1",
+  "description": "Grunt task to analyse CSS files. Suitable to watch for 4096 limit in IE9.",
   "keywords": [
     "grunt",
     "css",
     "selectors",
-    "declarations",
     "count",
     "analysis",
-    "css-count"
+    "declarations",
+    "rules",
+    "css-count",
+    "4096"
   ],
   "homepage": "https://github.com/orlinbox/grunt-css-count",
   "author": {
@@ -31,10 +33,10 @@
     "test": "grunt"
   },
   "dependencies": {
-    "glob": ">=4.3.5",
-    "css-parse": ">=2.0.0"
+    "css-parse": ">=2.0.0",
+    "glob": ">=4.3.5"
   },
   "devDependencies": {
-    "grunt": ">=0.4.5"
+    "grunt": ">=0.4.0"
   }
 }

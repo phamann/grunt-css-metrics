@@ -1,7 +1,7 @@
 grunt-css-count
 ===============
 
-Grunt task to analyse CSS files and log simple metrics. Suitable to watch for 4096 limit in IE9.
+Grunt task to analyse CSS files. Suitable to watch for 4096 limit in IE9.
 
 Displays the count of CSS selectors, CSS declarations and CSS rules for every chosen file.
 
@@ -9,18 +9,11 @@ Displays the count of CSS selectors, CSS declarations and CSS rules for every ch
 
 This plugin requires Grunt.
 
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin.
-
-Currently there is no npm package for this plugin, but you could clone this repo and install the needed dependencies with the following commands (inside your Grunt directory):
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-cd node_modules
-git clone https://github.com/orlinbox/grunt-css-count
-cd grunt-css-count
-npm install
+npm install grunt-css-count --save-dev
 ```
-
-Note: 'npm install' may require sudo.
 
 ## Options
 
@@ -29,7 +22,7 @@ Note: 'npm install' may require sudo.
 Type: `Number`
 Default: `∞`
 
-Maximum number of selectors within CSS file. (Note: IE9 selector limit is 4096)
+Maximum number of selectors within CSS file. (IE9 selector count limit is 4096)
 
 ## Examples
 
@@ -46,7 +39,7 @@ grunt.initConfig({
         'assets/styles/*.min.css'
       ],
       options: {
-        maxSelectors: 4096
+        maxSelectors: 4000
       }
     }
   }
@@ -56,12 +49,6 @@ grunt.loadNpmTasks('grunt-css-count');
 grunt.registerTask('default', ['csscount']);
 
 ```
-
-## Release History
-
-### 0.2.0 (10th February 2015)
-
-* Initial release of the rewritten module.
 
 ## Credits
 
