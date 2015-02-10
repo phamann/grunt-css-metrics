@@ -11,19 +11,16 @@ This plugin requires Grunt.
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin.
 
-Currently there is no npm package for this plugin, but you could clone this repo, and install the needed dependencies with the following commands:
+Currently there is no npm package for this plugin, but you could clone this repo and install the needed dependencies with the following commands (inside your Grunt directory):
 
 ```shell
+cd node_modules
 git clone https://github.com/orlinbox/grunt-css-count
-cd grunt-css-metrics
+cd grunt-css-count
 npm install
 ```
 
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
-
-```js
-grunt.loadNpmTasks('grunt-css-count');
-```
+Note: 'npm install' may require sudo.
 
 ## Options
 
@@ -47,39 +44,24 @@ grunt.initConfig({
       src: [
         'css/compiled/styles.css',
         'assets/styles/*.min.css'
-      ]
+      ],
+      options: {
+        maxSelectors: 4096
+      }
     }
   }
 });
 
 grunt.loadNpmTasks('grunt-css-count');
-
 grunt.registerTask('default', ['csscount']);
 
-```
-
-### Specifying Options
-
-Example of using the [options](https://github.com/orlinbox/grunt-css-count#options).
-
-```js
-csscount: {
-  dev: {
-    src: [
-      'assets/stylesheets/*.min.css'
-    ],
-    options: {
-      maxSelectors: 4096
-    }
-  }
-}
 ```
 
 ## Release History
 
 ### 0.2.0 (10th February 2015)
 
-* Initial release
+* Initial release of the rewritten module.
 
 ## Credits
 
