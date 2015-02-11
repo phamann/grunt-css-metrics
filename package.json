@@ -1,7 +1,7 @@
 {
   "name": "grunt-css-count",
-  "version": "0.2.1",
-  "description": "Grunt task to analyse CSS files. Suitable to watch for 4096 limit in IE9.",
+  "version": "0.2.2",
+  "description": "Grunt plugin to count CSS selectors, declarations and rules in CSS files.",
   "keywords": [
     "grunt",
     "css",

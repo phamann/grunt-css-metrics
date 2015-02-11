@@ -1,9 +1,9 @@
 grunt-css-count
 ===============
 
-Grunt task to analyse CSS files. Suitable to watch for 4096 limit in IE9.
+Grunt plugin to count CSS selectors, declarations and rules in CSS files.
 
-Displays the count of CSS selectors, CSS declarations and CSS rules for every chosen file.
+Suitable to watch for 4096 selector limit in IE9 and general statistics.
 
 ## Getting Started
 
@@ -15,20 +15,9 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 npm install grunt-css-count --save-dev
 ```
 
-## Options
-
-### maxSelectors
-
-Type: `Number`
-Default: `∞`
-
-Maximum number of selectors within CSS file. (IE9 selector count limit is 4096)
-
 ## Examples
 
-### Configuration Example
-
-Example of a Grunt config containing the csscount task.
+Example of a Grunt config (Gruntfile.js) containing the csscount task.
 
 ```js
 grunt.initConfig({
@@ -46,9 +35,18 @@ grunt.initConfig({
 });
 
 grunt.loadNpmTasks('grunt-css-count');
-grunt.registerTask('default', ['csscount']);
 
+grunt.registerTask('default', ['csscount']);
 ```
+
+## Options
+
+### maxSelectors
+
+Type: `Number`
+Default: `∞`
+
+Maximum number of selectors within CSS file. (IE9 selector count limit is 4096)
 
 ## Credits
 
