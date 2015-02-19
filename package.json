@@ -1,7 +1,7 @@
 {
   "name": "grunt-css-count",
-  "version": "0.2.2",
-  "description": "Grunt plugin to count CSS selectors, declarations and rules in CSS files.",
+  "version": "0.2.3",
+  "description": "Count CSS selectors, declarations and rules in CSS files.",
   "keywords": [
     "grunt",
     "css",

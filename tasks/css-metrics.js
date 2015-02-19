@@ -10,16 +10,17 @@ module.exports = function(grunt) {
       grunt.util.async.forEachSeries(files, function(path, next) {
         new CSSCount(path).stats(function(stats) {
 
-          grunt.log.subhead('CSS count for ' + path);
+          grunt.log.writeln('');
+          grunt.log.writeln(path.grey);
 
           var printMe = 'Selectors: ' + stats.totalSelectors;
           printMe += ' | Declarations: ' + stats.totalDeclarations;
           printMe += ' | Rules: ' + stats.totalRules;
           printMe += ' | S/R: ' + stats.selectorsPerRule;
           printMe += ' | D/R: ' + stats.declarationsPerRule;
-          printMe += ' | Size: '+ Math.ceil((stats.fileSize/1000).toFixed()) + 'k';
+          printMe += ' || '+ Math.ceil((stats.fileSize/1000).toFixed()) + 'k';
 
-          grunt.log.ok(printMe);
+          grunt.log.writeln(printMe);
 
           if (options.maxSelectors && (stats.totalSelectors > options.maxSelectors)) {
             grunt.fail.warn(path + ' exceeded maximum selector count!');
