@@ -22,6 +22,10 @@ module.exports = function(grunt) {
 
           grunt.log.writeln(printMe);
 
+          printMe = 'S nesting: ' + stats.selectorsNesting;
+
+          grunt.log.writeln(printMe);
+
           if (options.maxSelectors && (stats.totalSelectors > options.maxSelectors)) {
             grunt.fail.warn(path + ' exceeded maximum selector count!');
           }
