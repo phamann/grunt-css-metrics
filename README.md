@@ -1,9 +1,10 @@
 grunt-css-count
 ===============
 
-Count CSS selectors, declarations and rules in CSS files.
+Count CSS selectors, nesting depth, declarations and rules in CSS files.
 
-Suitable to watch for 4096 selector limit in IE9 and general statistics.
+- To monitor simplicity of CSS files (depth/nesting of selectors and etc.)
+- To watch for 4096 selector limit in IE9.
 
 ## Getting Started
 
@@ -14,6 +15,28 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 ```shell
 npm install grunt-css-count --save-dev
 ```
+
+## Sample output
+
+```js
+test/style.css
+Selectors: 17 | Declarations: 16 | Rules: 11 | S/R: 1.5 | D/R: 1.5 || 1k
+| D1: 7 (41%) | D2: 3 (18%) | D3: 4 (24%) | D4: 2 (12%) | D6: 1 (6%) || * 4
+```
+
+Line 1: Path to the CSS file being counted.
+
+Line 2: General statistics and size of file.
+
+S/R: selectors to rules ratio
+D/R: declarations to rules ratio
+
+Line 3: Depth of selectors (nesting) count and number of used global CSS selectors (*).
+
+D1: .selector-1 {}
+D2: .selector-1 .selector-2 {}
+D3: .selector-1 .selector-2 .selector-3 {}
+...
 
 ## Examples
 
@@ -28,7 +51,8 @@ grunt.initConfig({
         'assets/styles/*.min.css'
       ],
       options: {
-        maxSelectors: 4000
+        maxSelectors: 4000,
+        maxSelectorDepth: 5
       }
     }
   }
@@ -47,6 +71,20 @@ Type: `Number`
 Default: `∞`
 
 Maximum number of selectors within CSS file. (IE9 limit is 4096)
+
+### maxSelectorDepth
+
+Type: `Number`
+Default: `∞`
+
+Maximum depth (nesting) within selectors.
+
+### beForgiving
+
+Type: `Boolean`
+Default: `false`
+
+Whether grunt fail or not on 'maxSelectors' and 'maxSelectorDepth' errors.
 
 ## Credits
 

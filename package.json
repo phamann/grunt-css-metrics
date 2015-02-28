@@ -1,11 +1,13 @@
 {
   "name": "grunt-css-count",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Count CSS selectors, declarations and rules in CSS files.",
   "keywords": [
     "grunt",
     "css",
     "selectors",
+    "nesting",
+    "depth",
     "count",
     "analysis",
     "declarations",
@@ -37,6 +39,7 @@
     "glob": ">=4.3.5"
   },
   "devDependencies": {
-    "grunt": ">=0.4.0"
+    "grunt": "0.4.5",
+    "grunt-contrib-jshint": ">=0.11.0"
   }
 }

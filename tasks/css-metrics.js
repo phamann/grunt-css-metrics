@@ -6,6 +6,18 @@ module.exports = function(grunt) {
     var done = this.async();
     var options = this.options();
 
+    function createNestingTextAndDepth(nestingArr, totalAsterisk, stats) {
+      var maxDepth = 0;
+      var nestingText = '';
+      nestingArr.forEach(function(val, ind){
+        nestingText += ' D' + ind + ': ' + val + ' (' + Math.round((val/stats.totalSelectors)*100) + '%) |';
+        if (ind > maxDepth) maxDepth = ind;
+      });
+      stats.maxDepth = maxDepth;
+      nestingText += '| ' + '* ' + totalAsterisk;
+      return nestingText;
+    }
+
     function analyseFiles(files) {
       grunt.util.async.forEachSeries(files, function(path, next) {
         new CSSCount(path).stats(function(stats) {
@@ -22,12 +34,27 @@ module.exports = function(grunt) {
 
           grunt.log.writeln(printMe);
 
-          printMe = 'S nesting: ' + stats.selectorsNesting;
+          printMe = '|' + createNestingTextAndDepth(stats.nestingArr, stats.totalAsterisk, stats);
 
           grunt.log.writeln(printMe);
 
+          var errMessage;
           if (options.maxSelectors && (stats.totalSelectors > options.maxSelectors)) {
-            grunt.fail.warn(path + ' exceeded maximum selector count!');
+            errMessage = path + ' exceeded max selector count (' + stats.totalSelectors + '/' + options.maxSelectors + ')';
+            if (options.beForgiving) {
+              grunt.log.warn(errMessage);
+            } else {
+              grunt.fail.warn(errMessage);
+            }
+          }
+
+          if (options.maxSelectorDepth && (stats.maxDepth > options.maxSelectorDepth)) {
+            errMessage = path + ' exceeded max selector depth (' + stats.maxDepth + '/' + options.maxSelectorDepth + ')';
+            if (options.beForgiving) {
+              grunt.log.warn(errMessage);
+            } else {
+              grunt.fail.warn(errMessage);
+            }
           }
 
           next();

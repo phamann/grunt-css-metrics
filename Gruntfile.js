@@ -7,14 +7,24 @@ module.exports = function(grunt) {
           'test/style.css'
         ],
         options: {
-          maxSelectors: 4000
+          maxSelectors: 10,
+          maxSelectorDepth: 5,
+          beForgiving: true
         }
       }
+    },
+    jshint: {
+      files: [
+        'Gruntfile.js',
+        'lib/*.js',
+        'tasks/*.js'
+      ],
     }
   });
 
   grunt.loadNpmTasks('grunt-css-count');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('default', ['csscount']);
+  grunt.registerTask('default', ['csscount', 'jshint']);
 
 };
