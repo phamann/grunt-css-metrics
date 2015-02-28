@@ -18,25 +18,25 @@ npm install grunt-css-count --save-dev
 
 ## Sample output
 
-```js
+```
 test/style.css
 Selectors: 17 | Declarations: 16 | Rules: 11 | S/R: 1.5 | D/R: 1.5 || 1k
 | D1: 7 (41%) | D2: 3 (18%) | D3: 4 (24%) | D4: 2 (12%) | D6: 1 (6%) || * 4
 ```
 
-Line 1: Path to the CSS file being counted.
-
-Line 2: General statistics and size of file.
-
-S/R: selectors to rules ratio
-D/R: declarations to rules ratio
-
-Line 3: Depth of selectors (nesting) count and number of used global CSS selectors (*).
-
-D1: .selector-1 {}
-D2: .selector-1 .selector-2 {}
-D3: .selector-1 .selector-2 .selector-3 {}
-...
+> Line 1: Path to the CSS file being counted.
+>
+> Line 2: General statistics and size of file.
+>
+> S/R: selectors to rules ratio
+> D/R: declarations to rules ratio
+>
+> Line 3: Depth of selectors (nesting) count and number of used global CSS selectors (*).
+>
+> D1: .selector-1 {}
+> D2: .selector-1 .selector-2 {}
+> D3: .selector-1 .selector-2 .selector-3 {}
+> ...
 
 ## Examples
 
@@ -84,7 +84,7 @@ Maximum depth (nesting) within selectors.
 Type: `Boolean`
 Default: `false`
 
-Whether grunt fail or not on 'maxSelectors' and 'maxSelectorDepth' errors.
+Whether Grunt fail or not on 'maxSelectors' and 'maxSelectorDepth' errors.
 
 ## Credits
 
