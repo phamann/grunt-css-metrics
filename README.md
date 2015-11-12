@@ -20,7 +20,7 @@ npm install grunt-css-count --save-dev
 
 ```
 test/style.css
-Selectors: 17 | Declarations: 16 | Rules: 11 | S/R: 1.5 | D/R: 1.5 || 1k (1k gzipped)
+Selectors: 17 | Declr: 16 | Rules: 11 | S/R: 1.5 | D/R: 1.5 || 1k (1k gzip)
 | D1: 7 (41%) | D2: 3 (18%) | D3: 4 (24%) | D4: 2 (12%) | D6: 1 (6%) || * 4
 ```
 
