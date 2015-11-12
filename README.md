@@ -20,7 +20,7 @@ npm install grunt-css-count --save-dev
 
 ```
 test/style.css
-Selectors: 17 | Declarations: 16 | Rules: 11 | S/R: 1.5 | D/R: 1.5 || 1k
+Selectors: 17 | Declarations: 16 | Rules: 11 | S/R: 1.5 | D/R: 1.5 || 1k (1k gzipped)
 | D1: 7 (41%) | D2: 3 (18%) | D3: 4 (24%) | D4: 2 (12%) | D6: 1 (6%) || * 4
 ```
 
@@ -28,7 +28,7 @@ Selectors: 17 | Declarations: 16 | Rules: 11 | S/R: 1.5 | D/R: 1.5 || 1k
 
 *Line 2:* General statistics and size of file.
 
-S/R: selectors to rules ratio   
+S/R: selectors to rules ratio
 D/R: declarations to rules ratio
 
 *Line 3:* Depth of selectors (nesting count) and number of used global CSS selectors (*).

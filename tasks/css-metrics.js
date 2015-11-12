@@ -30,7 +30,7 @@ module.exports = function(grunt) {
           printMe += ' | Rules: ' + stats.totalRules;
           printMe += ' | S/R: ' + stats.selectorsPerRule;
           printMe += ' | D/R: ' + stats.declarationsPerRule;
-          printMe += ' || '+ Math.ceil((stats.fileSize/1000).toFixed()) + 'k';
+          printMe += ' || '+ Math.ceil((stats.fileSize/1000).toFixed()) +'k ('+ Math.ceil((stats.gzipSize/1000).toFixed()) +'k gzipped)';
 
           grunt.log.writeln(printMe);
 
