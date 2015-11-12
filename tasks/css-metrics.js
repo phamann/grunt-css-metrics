@@ -40,20 +40,20 @@ module.exports = function(grunt) {
 
           var errMessage;
           if (options.maxSelectors && (stats.totalSelectors > options.maxSelectors)) {
-            errMessage = path + ' exceeded max selector count (' + stats.totalSelectors + '/' + options.maxSelectors + ')';
+            errMessage = 'exceeded max selector count (' + stats.totalSelectors + '/' + options.maxSelectors + ')';
             if (options.beForgiving) {
-              grunt.log.warn(errMessage);
+              grunt.log.warn(errMessage.red);
             } else {
-              grunt.fail.warn(errMessage);
+              grunt.fail.warn(errMessage.red);
             }
           }
 
           if (options.maxSelectorDepth && (stats.maxDepth > options.maxSelectorDepth)) {
-            errMessage = path + ' exceeded max selector depth (' + stats.maxDepth + '/' + options.maxSelectorDepth + ')';
+            errMessage = 'exceeded max selector depth (' + stats.maxDepth + '/' + options.maxSelectorDepth + ')';
             if (options.beForgiving) {
-              grunt.log.warn(errMessage);
+              grunt.log.warn(errMessage.red);
             } else {
-              grunt.fail.warn(errMessage);
+              grunt.fail.warn(errMessage.red);
             }
           }
 
