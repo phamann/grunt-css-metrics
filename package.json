@@ -23,13 +23,13 @@
     "test": "grunt"
   },
   "dependencies": {
-    "glob": "3.2.1",
-    "css-parse": "~1.4.0",
+    "css": "^2.2.1",
+    "glob": "^7.0.5",
     "humanize": "~0.0.7"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.4.3"
+    "grunt": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0"
   },
   "keywords": [
     "gruntplugin",
