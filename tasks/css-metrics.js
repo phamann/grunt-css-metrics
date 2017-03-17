@@ -23,14 +23,14 @@ module.exports = function(grunt) {
         new CSSCount(path).stats(function(stats) {
 
           grunt.log.writeln('');
-          grunt.log.writeln(path.grey);
+          grunt.log.writeln(path.cyan);
 
           var printMe = 'Selectors: ' + stats.totalSelectors;
           printMe += ' | Declr: ' + stats.totalDeclarations;
           printMe += ' | Rules: ' + stats.totalRules;
           printMe += ' | S/R: ' + stats.selectorsPerRule;
           printMe += ' | D/R: ' + stats.declarationsPerRule;
-          printMe += ' || '+ Math.ceil((stats.fileSize/1000).toFixed()) +'k ('+ Math.ceil((stats.gzipSize/1000).toFixed()) +'k gzip)';
+          printMe += ' || '+ (Math.ceil((stats.fileSize/1000).toFixed()) +'k ('+ Math.ceil((stats.gzipSize/1000).toFixed()) +'k gzip)').green;
 
           grunt.log.writeln(printMe);
 

@@ -1,6 +1,6 @@
 {
   "name": "grunt-css-count",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Count CSS selectors, declarations and rules in CSS files.",
   "keywords": [
     "grunt",
@@ -36,11 +36,7 @@
   },
   "dependencies": {
     "css-parse": ">=2.0.0",
-    "glob": ">=4.3.5",
-    "gzip-size": "^1.0.0"
-  },
-  "devDependencies": {
-    "grunt": "0.4.5",
-    "grunt-contrib-jshint": ">=0.11.0"
+    "glob": ">=7.1.1",
+    "gzip-size": "^3.0.0"
   }
 }

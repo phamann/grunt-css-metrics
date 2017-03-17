@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     csscount: {
       dev: {
         src: [
-          'test/style.css'
+          'style.css'
         ],
         options: {
           maxSelectors: 10,
@@ -16,8 +16,8 @@ module.exports = function(grunt) {
     jshint: {
       files: [
         'Gruntfile.js',
-        'lib/*.js',
-        'tasks/*.js'
+        '../lib/*.js',
+        '../tasks/*.js'
       ],
     }
   });
